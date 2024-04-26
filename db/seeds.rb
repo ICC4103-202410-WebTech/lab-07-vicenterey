@@ -138,8 +138,6 @@ Post.create!(
   likes_count: 9000
 )
 
-p1 = Post.find_by(title: "Post 1")
-
 Tag.create!(
   name: "Tag 1"
 )
@@ -158,10 +156,4 @@ Tag.create!(
 
 Tag.create!(
   name: "FuriaRoja"
-)
-
-t1 = Tag.find_by(name: "Tag 1")
-Post_Tags.create!(
-  post_id: p1.id,
-  tag_id: t1.id
 )
