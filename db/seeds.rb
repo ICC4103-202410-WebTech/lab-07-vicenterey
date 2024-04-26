@@ -9,6 +9,8 @@
 #   end
 Post.delete_all
 User.delete_all
+Tag.delete_all
+Post_Tags.delete_all
 
 User.create!(
   name: "John Doe",
@@ -136,8 +138,10 @@ Post.create!(
   likes_count: 9000
 )
 
+p1 = Post.find_by(title: "Post 1")
+
 Tag.create!(
-  name: "Golazo"
+  name: "Tag 1"
 )
 
 Tag.create!(
@@ -154,4 +158,10 @@ Tag.create!(
 
 Tag.create!(
   name: "FuriaRoja"
+)
+
+t1 = Tag.find_by(name: "Tag 1")
+Post_Tags.create!(
+  post_id: p1.id,
+  tag_id: t1.id
 )

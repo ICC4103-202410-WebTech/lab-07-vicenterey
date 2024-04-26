@@ -17,7 +17,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_26_174950) do
   create_table "posts", force: :cascade do |t|
     t.string "title", null: false
     t.text "content", null: false
-    t.datetime "published_at", default: "2024-04-26 19:47:08", null: false
+    t.datetime "published_at", default: "2024-04-26 22:32:59", null: false
     t.integer "answers_count", default: 0, null: false
     t.integer "likes_count", default: 0, null: false
     t.bigint "user_id", null: false
